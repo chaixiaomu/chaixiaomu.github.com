@@ -20,7 +20,11 @@ folder: product1
 
 3. 导入 Tiny 组件 demo，下载地址：[demo 下载](http://www.mtiny.cn/Tiny-demo.zip)，这份 demo 囊括了Tiny 平台大多数的功能，请详细阅读 demo 代码。
 4. Tiny 组件还有 iOS 平台的 app，用来展示Tiny 丰富的功能，下载地址：<a href="https://www.pgyer.com/explorer" target="_blank">Tiny 组件 demo 下载 </a>。这是应用首图：
+
+<center>
 ![](http://www.mtiny.cn/explorer.jpg)
+</center>
+
 5. 下载好 demo 之后，就可以开始导入到 Tiny IDE 中了，具体的导入流程如下图所示：<img src="%base_url%/jiaocheng .gif" />
 
 
@@ -32,8 +36,9 @@ folder: product1
 
 接下来我们要展现一个用户信息的页面，绘制出用户的姓名、性别、身份证号以及手机号码等等信息，具体的 demo 效果图如下所示：
 
+<center>
 ![](http://www.mtiny.cn/guide/guide01.png)
-
+</center>
 在上一节教程中想必大家已经学会了如何 在TinyIDE 中创建项目，我们也对项目包含的文件进行分析，一个完整的项目应该包含Js、CSS 和img 等文件或文件夹，之所以这样是因为我们的 TinyBuilder 是通过 tml 和 css 构建用户界面，使用 JavaScript 脚本进行交互和业务开发，整个开发过程基本都在 TinyIDE 中完成。简而言之：
 
 * tml：包含了 App 的表现内容和结构。
