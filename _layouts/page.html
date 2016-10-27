@@ -1,45 +1,72 @@
-{% include pagehead.html %}
-{% include header.html %}
+---
+layout: default
+---
 
-<article class="bookPage">
+<div class="post-header">
+   <h1 class="post-title-main">{{ page.title }}</h1>
+</div>
 
-  <div class="row">
-    <div class="twelve columns">
+{% if page.simple_map == true %}
 
-<h1> {{ page.title }} </h1>
+<script>
+    $(document).ready ( function(){
+        $('.box{{page.box_number}}').addClass('active');
+    });
+</script>
 
-<aside class="right"><p>来自<a href="/">《{{ site.sitename }}》</a>，by 阮一峰</p></aside>
+{% include custom/{{page.map_name}}.html %}
 
-{% include toc.html %}
+{% elsif page.complex_map == true %}
 
-{{ content }}
+<script>
+    $(document).ready ( function(){
+        $('.modalButton{{page.box_number}}').addClass('active');
+    });
+</script>
 
-</article>
+{% include custom/{{page.map_name}}.html %}
 
-<div class="row">
-<div class="twelve columns">
+{% endif %}
 
-<h2>留言</h2>
+<div class="post-content">
 
-<div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'jstutorial'; // required: replace example with your forum shortname
+   {% if page.summary %}
+    <div class="summary">{{page.summary}}</div>
+   {% endif %}
 
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    {% unless page.toc == false %}
+    {% include toc.html %}
+    {% endunless %}
 
-</section>
+    {% unless jekyll.environment == "production" %}
+
+    {% if site.github_editme_path %}
+
+    <a target="_blank" href="https://github.com/{{site.github_editme_path}}/_pages/{{page.folder}}/{{page.url | remove: "/" | append: ".md"}}" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    {% endif %}
+
+    {% endunless %}
+
+  {{content}}
+
+    <div class="tags">
+        {% if page.tags != null %}
+        <b>Tags: </b>
+        {% assign projectTags = site.data.tags.allowed-tags %}
+        {% for tag in page.tags %}
+        {% if projectTags contains tag %}
+        <a href="{{ "tag_" | append: tag | append: ".html" }}" class="btn btn-default navbar-btn cursorNorm" role="button">{{page.tagName}}{{tag}}</a>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+    </div>
+
+    {% if site.disqus %}
+{% include disqus.html %}
+    {% endif %}
 
 </div>
-</div>
+
+{{site.data.alerts.hr_shaded}}
 
 {% include footer.html %}
-

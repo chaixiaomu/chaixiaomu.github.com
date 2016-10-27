@@ -1,34 +1,41 @@
 ---
 layout: default
-css: ['sidebar-post-nav.css']
 ---
-{% include jumbotron.html %}
-<article class="post container" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-    <div class="row">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+        <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time> {% if page.author %}<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">/ {{ page.author }}</span></span>{% endif %}{% if page.tags != null %}/
+            {% assign projectTags = site.data.tags.allowed-tags %}
+            {% for tag in page.tags %}
+            {% if projectTags contains tag %}
+            <a href="{{ "tag_" | append: tag | append: ".html"}}">{{tag}}</a>{% unless forloop.last %}, {% endunless%}
+            {% endif %}
+            {% endfor %}
+            {% endif %}
 
-        {% if page.no-post-nav %}
-        <div class="col-md-12 markdown-body">
+        </p>
 
-            {{ content }}
 
-            <!-- Comments -->
-            {% include disqus-comments.html %}
-        </div>
-        {% else %}
-        <div class="col-md-8 markdown-body">
+    </header>
 
-            {{ content }}
+    <div class="post-content" itemprop="articleBody">
 
-            <!-- Comments -->
-            {% include disqus-comments.html %}
-        </div>
-
-        <div class="col-md-4">
-            {% include sidebar-post-nav.html %}
-        </div>
+        {% if page.summary %}
+        <div class="summary">{{page.summary}}</div>
         {% endif %}
 
+        {{ content }}
     </div>
 
+
+
 </article>
+
+{% if site.disqus %}
+{% include disqus.html %}
+{% endif %}
+
+{{site.data.alerts.hr_shaded}}
+
+{% include footer.html %}
