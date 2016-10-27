@@ -1,39 +1,68 @@
-Raneto [![](https://travis-ci.org/gilbitron/Raneto.svg?branch=master)](https://travis-ci.org/gilbitron/Raneto)
-======
+# OpenTheme
 
-[![Raneto Logo](https://raw.githubusercontent.com/gilbitron/Raneto/master/logo/logo_readme.png)](http://raneto.com/)
+Powerful new theme featuring Semantic UI for speedily creating amazing websites and mobile-hybrid apps on GitHub Pages.
 
+## Getting Started
 
-[Raneto](http://raneto.com) is a free, open, simple Markdown powered Knowledgebase for Node.js.  
-[Find out more &rarr;](http://docs.raneto.com/what-is-raneto)  
+### Fork and Publish Direct from GitHub
 
-Visit [http://docs.raneto.com](http://docs.raneto.com) to see a demo and get started!
+1. Fork OpenTheme as your own repo
+2. IMPORTANT: Edit _config.yml -> "API Keys" section to replace OpenTheme keys with your own
+3. Edit and publish _posts, or _data, or pages directly from GitHub
 
-Quickstart
-----------
+### Local Setup
 
-Run this in a terminal and then visit [http://localhost:3000](http://localhost:3000).  
-For full Installation instructions, see the [Installation Guide](http://docs.raneto.com/install/installing-raneto).  
-`git clone https://github.com/gilbitron/Raneto.git && cd Raneto && npm install && npm start`
+```
+bundle install # Install Jekyll, Github Pages gems
+npm install # Install Gulp and dependences
+gulp # Build, test, serve and watch your local setup
+```
 
-Links
----------------
+IMPORTANT: Edit **_config.yml** -> "API Keys" section to replace OpenTheme keys with your own
 
-- [Configuration](http://docs.raneto.com/usage/configuration)
-- [Production Notes](http://docs.raneto.com/install/production-notes)
-- [Deploying to Heroku](http://docs.raneto.com/tutorials/deploying-raneto-to-heroku)
-- [Contributing](https://github.com/gilbitron/Raneto/blob/master/CONTRIBUTE.md)
+Optionally edit **gulpfile.js** -> BrowserSync host, port to your local setup
 
-Related Projects
-----------------
+Optionally, helper bash scripts available in **/scripts** folder. Use **shove.sh** to push changes to your repo. Use **clone.sh** to copy changes to GitHub Pages.
 
-- [Deploy Raneto to your servers with Ansible](https://github.com/ryanlelek/raneto-devops) (@ryanlelek)
-- [Run Raneto in a Vagrant container](https://github.com/draptik/vagrant-raneto) (@draptik)
+## File Structure
 
-Credits
--------
+### Folders Pre-processed by GitHub Pages / Jekyll
 
-Raneto was created by [Gilbert Pellegrom](http://gilbert.pellegrom.me) from [Dev7studios](http://dev7studios.com).  
-Maintained by [Ryan Lelek](http://www.ryanlelek.com) from [AnsibleTutorials.com](http://www.ansibletutorials.com).  
-Logo by [@mmamrila](https://github.com/mmamrila)  
-Released under the [MIT license](https://raw.githubusercontent.com/gilbitron/Raneto/master/LICENSE).
+- **_includes** html partials reusable in layouts.
+- **_layouts** html layouts reusable in pages. 
+- **_posts** Post types organized by folder. **apps** contains single page apps. **blog** contains blog posts.
+- **_data** Static data files including YAML Front Matter, CSV, JSON formats usable by GitHub Pages sites.
+
+### Asset Folders
+
+- **js** add site specific JavaScript to custom.js. Vendor libraries are added as minified where available.
+- **css** add site specific CSS to custom.css. Vendor libraries are added as minified where available. Contains folders for assets referenced by custom or vendor css.
+- **img** image assets.
+
+### Development Automation
+
+- **script** Automation shell scripts for development, testing. [TO DO] Replace with Gulp pipeline automation, E2E, Lint tests.
+
+### Files
+
+- **Gemfile** defines gems required for creating local Jekyll building and serving "like" how GitHub Pages would.
+
+## Dependencies
+
+- Semantic UI
+- Jekyll
+
+## Reference Projects
+
+Study following projects for best practices.
+
+### Jekyll built sites and themes
+
+- [Jekyll website](http://jekyllrb.com/)
+- GitHub Pages themes
+- [Lanyon](https://github.com/poole/lanyon)
+- [Jekyll Themes](http://jekyllthemes.org/)
+
+### GitHub hosted sites
+
+- [Semantic UI website](http://www.semantic-ui.com)

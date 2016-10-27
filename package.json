@@ -1,87 +1,39 @@
 {
-  "name": "raneto",
-  "version": "0.11.0",
-  "description": "Markdown powered Knowledgebase",
-  "author": "Gilbert Pellegrom <gilbert@pellegrom.me>",
+  "name": "opentheme",
+  "version": "0.0.0",
+  "description": "Powerful New Theme for GitHub Pages",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Manav Sehgal",
   "license": "MIT",
-  "keywords": [
-    "raneto",
-    "knowledgebase",
-    "markdown"
-  ],
+  "devDependencies": {
+    "browser-sync": "^1.3.7",
+    "gulp": "^3.8.8",
+    "gulp-autoprefixer": "1.0.0",
+    "gulp-csslint": "^0.1.5",
+    "gulp-imagemin": "^2.1.0",
+    "gulp-jshint": "^1.9.0",
+    "gulp-minify-css": "^0.3.12",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^0.7.3",
+    "gulp-uglify": "^1.0.2",
+    "imagemin-pngquant": "^4.0.0",
+    "jshint-stylish": "^1.0.0"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gilbitron/Raneto.git"
+    "url": "https://github.com/open-start/opentheme.git"
   },
-  "bugs": "https://github.com/gilbitron/Raneto/issues",
-  "contributors": [ "https://github.com/gilbitron/Raneto/graphs/contributors" ],
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://raw.githubusercontent.com/gilbitron/Raneto/master/LICENSE"
-    }
+  "keywords": [
+    "jekyll",
+    "semantic ui",
+    "github pages",
+    "theme"
   ],
-  "bin": "./bin/raneto",
-  "main": "./app",
-  "scripts": {
-    "start": "DEBUG=raneto node example/server.js",
-    "start_win": "set DEBUG=raneto&&node example/server.js",
-    "test": "npm run lint & npm run compile & mocha --reporter spec test/*.js",
-    "postinstall": "npm update && npm run gulp",
-    "gulp": "gulp",
-    "compile": "babel app/core/src --out-dir app/core/lib",
-    "lint": "jshint app/**/*.js test/*.js",
-    "prepublish": "npm run compile"
+  "bugs": {
+    "url": "https://github.com/open-start/opentheme/issues"
   },
-  "engines": {
-    "node": ">=4.0.0"
-  },
-  "dependencies": {
-    "always-tail": "^0.2.0",
-    "body-parser": "^1.15.2",
-    "bootstrap": "^3.3.7",
-    "bootstrap-rtl": "^3.3.4",
-    "commander": "^2.9.0",
-    "cookie-parser": "^1.4.3",
-    "debug": "^2.2.0",
-    "express": "^4.14.0",
-    "express-session": "^1.14.1",
-    "extend": "^3.0.0",
-    "fitvids": "^2.0.0",
-    "glob": "^7.0.6",
-    "gulp": "^3.9.1",
-    "gulp-shell": "^0.5.2",
-    "highlightjs": "^8.7.0",
-    "hogan-express": "^0.5.2",
-    "jquery": "^2.2.4",
-    "jquery.backstretch": "^2.1.13",
-    "js-yaml": "^3.6.1",
-    "lunr": "^0.7.1",
-    "markdown-toc": "^0.12.16",
-    "marked": "^0.3.6",
-    "masonry-layout": "3.3.2",
-    "moment": "^2.14.1",
-    "morgan": "^1.7.0",
-    "passport": "^0.3.2",
-    "passport-google-oauth20": "^1.0.0",
-    "pm2": "^1.1.3",
-    "sanitize-filename": "^1.6.0",
-    "serve-favicon": "^2.3.0",
-    "sitemap": "^1.8.1",
-    "sweetalert": "^1.1.3",
-    "underscore": "^1.8.3",
-    "underscore.string": "^3.3.4",
-    "validator": "^5.6.0"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.14.0",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-plugin-transform-object-assign": "^6.8.0",
-    "babel-preset-es2015": "^6.14.0",
-    "babel-register": "^6.14.0",
-    "chai": "3.5.0",
-    "jshint": "^2.9.3",
-    "mocha": "^3.0.2",
-    "supertest": "^2.0.0"
-  }
+  "homepage": "https://github.com/open-start/opentheme"
 }
