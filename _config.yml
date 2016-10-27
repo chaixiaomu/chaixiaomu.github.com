@@ -8,7 +8,7 @@ topnav_title: TinyBuilder
 site_title: Jekyll theme for documentation
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
-company_name: ’杭州长亮金融信息服务有限公司‘
+company_name: 杭州长亮金融信息服务有限公司
 # this appears in the footer
 
 github_editme_path: tomjohnson1492/documentation-theme-jekyll/blob/gh-pages/pages/
