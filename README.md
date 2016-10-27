@@ -1,44 +1,39 @@
-![favicon](https://raw.github.com/iamnii/wangana/master/favicon.png) Wangana - Jekyll Theme
-==============
+Raneto [![](https://travis-ci.org/gilbitron/Raneto.svg?branch=master)](https://travis-ci.org/gilbitron/Raneto)
+======
 
-Wangana is responsive [Jekyll](http://jekyllrb.com/) theme, perfect for powering your GitHub hosted blog. Created with love by [iamnii](https://twitter.com/_iamnii).
+[![Raneto Logo](https://raw.githubusercontent.com/gilbitron/Raneto/master/logo/logo_readme.png)](http://raneto.com/)
 
-* Demo [here](http://iamnii.github.io/wangana/)
 
-## Screenshot
-![screenshot](https://raw.github.com/iamnii/wangana/master/assets/images/wangana.png)
+[Raneto](http://raneto.com) is a free, open, simple Markdown powered Knowledgebase for Node.js.  
+[Find out more &rarr;](http://docs.raneto.com/what-is-raneto)  
 
-## Contributing
-1. Fork the theme ( https://github.com/iamnii/wangana/fork ) The `master` branch is for development and pull requests. The `gh-pages` branch is for the demo page; don't bother.
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+Visit [http://docs.raneto.com](http://docs.raneto.com) to see a demo and get started!
 
-## Issues
-[Open](https://github.com/iamnii/wangana/issues/new) issues if you run into trouble or have suggestions. Pull Requests always welcome.
+Quickstart
+----------
 
-## Installation & Usage
-1 > [Download](https://github.com/iamnii/wangana/archive/master.zip) package
+Run this in a terminal and then visit [http://localhost:3000](http://localhost:3000).  
+For full Installation instructions, see the [Installation Guide](http://docs.raneto.com/install/installing-raneto).  
+`git clone https://github.com/gilbitron/Raneto.git && cd Raneto && npm install && npm start`
 
-2 > Fill in the details of the configuration file (/_config.yml) by uncommenting the differents and edit to taste
-Edit: _config.yml (general options), main.css (theme colors & fonts)
-``` bat
-wangana/
-├── _config.yml
-├── _assets/
-    ├── _scss/
-        ├── main.scss
-```
+Links
+---------------
 
-3 > Run locally with the following commands while in the root directory and view in a browser at localhost:4000
-``` bat
-$ jekyll build
-# Compile and build site files
+- [Configuration](http://docs.raneto.com/usage/configuration)
+- [Production Notes](http://docs.raneto.com/install/production-notes)
+- [Deploying to Heroku](http://docs.raneto.com/tutorials/deploying-raneto-to-heroku)
+- [Contributing](https://github.com/gilbitron/Raneto/blob/master/CONTRIBUTE.md)
 
-$ jekyll serve --watch
-# Serve site locally
-```
+Related Projects
+----------------
 
-## Copyright & License
-The MIT License (MIT), Copyright (c) 2014 Nii Adjetey Sowah. [Read full document.](LICENSE)
+- [Deploy Raneto to your servers with Ansible](https://github.com/ryanlelek/raneto-devops) (@ryanlelek)
+- [Run Raneto in a Vagrant container](https://github.com/draptik/vagrant-raneto) (@draptik)
+
+Credits
+-------
+
+Raneto was created by [Gilbert Pellegrom](http://gilbert.pellegrom.me) from [Dev7studios](http://dev7studios.com).  
+Maintained by [Ryan Lelek](http://www.ryanlelek.com) from [AnsibleTutorials.com](http://www.ansibletutorials.com).  
+Logo by [@mmamrila](https://github.com/mmamrila)  
+Released under the [MIT license](https://raw.githubusercontent.com/gilbitron/Raneto/master/LICENSE).
