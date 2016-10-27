@@ -1,34 +1,34 @@
-# UPYUN 文档中心
+##[点我查看中文说明](https://github.com/dubuyuye/blog/blob/gh-pages/README_zh_CN.md)
 
-又拍云的文档中心基于 [MkDocs](http://mkdocs.org/) 制作。所有文档的源文件全部位于 `sources/` 目录下，并都为 Markdown 格式。
+# Blog Address
 
-所有生成的文档页面全部托管于 [http://docs.upyun.com](http://docs.upyun.com)，并与本项目仓库保持实时同步。
-
-
-## 帮助完善 UPYUN 的文档
-如果想要帮助 UPYUN 完善文档，请查看：[CONTRIBUTING.md](CONTRIBUTING.md)。
+<http://blog.rainyalley.com/>
 
 
-## 本地运行
+# Must Modify
 
-1\. 安装所需的 MkDocs
+## 1.swiftype
 
-```
-$ pip install 'mkdocs'
-```
+This service provides the on-site search function.
 
-2\. 进入本项目仓库根目录，并执行 `mkdocs serve`
+Service address： <https://swiftype.com/>.
 
-```
-$ cd /path/to/this
-$ mkdocs serve
-```
+After the setup is complete， you need to modify the `swiftype_searchId` in `_config.yml`.
 
-3\. 使用浏览器访问：
+In your swiftype engine, go to `Setup and integration` -> `Install Search`, you could find the `swiftype_searchId`.
 
-```
-http://127.0.0.1:8000/
+```html
+<script type="text/javascript">
+...
+...
+  _st('install','swiftype_searchId','2.0.0');
+</script>
 ```
 
-## License
-所有 `source/` 目录中的内容，授权方式均为 [CC:BY-NC-SA](http://creativecommons.org/licenses/by-nc-sa/4.0/)
+## 2.disqus
+
+This service provides the comment function.
+
+Service address： <https://disqus.com/>.
+
+After the setup is complete， you need to modify the `disqus_shortname` in `_config.yml`.
